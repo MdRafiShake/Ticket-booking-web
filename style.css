@@ -1,0 +1,933 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=SUSE:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=SUSE:wght@100..800&family=Sofadi+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* deafult color  */
+:root {
+    --body-color--: rgb(253, 252, 252);
+
+}
+
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* dark color this container will be white color bank */
+.dark {
+    --body-color--: rgb(46, 42, 42);
+}
+
+
+
+body {
+    background-color: var(--body-color--);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* navbar  */
+
+nav {
+    width: 80vw;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+
+.heading {
+    font-size: 35px;
+    color: black;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.icons {
+    display: flex;
+}
+
+
+
+
+.icon {
+    font-size: 20px;
+    padding: 7px;
+    color: rgb(135, 132, 132);
+    text-decoration: none;
+    font-family: "Sofadi One", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.icon:hover {
+    text-decoration: underline;
+    color: rgb(252, 252, 252);
+}
+
+.button {
+    height: 60px;
+    width: 110px;
+    background-color: rgb(255, 254, 254);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    border: 4px solid rgb(0, 97, 23);
+    margin: 12px;
+}
+
+
+
+.button .btn-txt {
+    font-size: 20px;
+    padding: 5px;
+    color: rgb(0, 97, 23);
+    font-family: "Sofadi One", system-ui;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.btn {
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: rgb(0, 97, 23);
+    transition: all 500ms ease-in-out;
+    border-color: rgb(255, 254, 254);
+
+    .btn-txt {
+        color: rgb(255, 254, 254);
+        transition: all 500ms ease-in-out;
+    }
+}
+
+
+.btn-image {
+    width: 35px;
+}
+
+
+
+/* theme controller  */
+
+
+.theme-color {
+    visibility: hidden;
+
+}
+
+.input label {
+    height: 30px;
+    width: 80px;
+    /* background-color: white; */
+    display: inline-block;
+    border-radius: 150px;
+    border: 3px solid rgb(255, 255, 255);
+    transition: .4s;
+    cursor: pointer;
+}
+
+.input label::after {
+    content: "";
+    height: 28px;
+    width: 28px;
+    border-radius: 100%;
+    background-color: white;
+    position: absolute;
+    margin: 1px;
+    transition: .4s;
+}
+
+.theme-color:checked+label {
+    border-color: black;
+}
+
+.theme-color:checked+label::after {
+    margin-left: 80px;
+    transform: translateX(-100%);
+}
+
+label:active::after {
+    width: 40px;
+}
+
+.sun {
+    position: relative;
+    left: -85px;
+    top: -7px;
+}
+
+.moon {
+    position: relative;
+    left: -58px;
+    top: -7px;
+}
+
+/* poster */
+.poster {
+    width: 80vw;
+    height: 650px;
+    background-color: black;
+    background-image: url(images/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.txt {
+    width: 50vw;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.txt-x {
+    font-size: 65px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    padding: 10px;
+    color: white;
+}
+
+.txt-m {
+    color: rgb(5, 196, 28);
+}
+
+
+.txt p {
+    font-size: 18px;
+    color: white;
+    font-family: "Sofadi One", system-ui;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+}
+
+.btn-tickets {
+    height: 50px;
+    width: 120px;
+    background-color: aqua;
+    border-radius: 12px;
+    margin: 20px;
+    font-size: 20px;
+    font-family: "Sofadi One", system-ui;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-tickets:hover {
+    background-color: rgb(147, 233, 233);
+}
+
+.txt a {
+    text-decoration: none;
+}
+
+main {
+    margin-top: 70px;
+}
+
+.cardcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2vw;
+
+}
+
+.flexc {
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+}
+
+.offers {
+    width: 38vw;
+    height: 14vw;
+    border-radius: 15px;
+
+}
+
+.offer-txt {
+    color: rgb(111, 104, 104);
+    font-size: 50px;
+    font-family: "Sofadi One", system-ui;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+}
+
+.off-col1 {
+    background-image: url(https://wasib2005.github.io/Assignment5-25.02.2024/rec/images/Coupon-1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.off-col2 {
+    background-image: url(https://wasib2005.github.io/Assignment5-25.02.2024/rec/images/Coupon-2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.off-col3 {
+    background-image: url(https://wasib2005.github.io/Assignment5-25.02.2024/rec/images/Free.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* see more button  */
+.off-btn {
+    background-color: rgb(3, 120, 255);
+}
+
+.off-btn:hover {
+    background-color: rgb(3, 60, 125);
+}
+
+.container {
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.layer {
+    width: 80vw;
+    height: 5vw;
+    border-radius: 160px 160px 0px 0px;
+    box-shadow: inset 0px 6px green;
+}
+
+.text-container {
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.txt-main {
+    font-size: 28px;
+    color: black;
+    font-weight: 700;
+
+}
+
+.txt-sub {
+    font-size: 18px;
+    color: black;
+    font-family: "Sofadi One", system-ui;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.ticket-container {
+    width: 90vw;
+    height: 22vw;
+    border: 4px solid black;
+    border-radius: 20px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.ticket-side-left {
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ticket-left-container {
+    width: 22vw;
+    height: 7vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px;
+}
+
+.ticket-bus-logo {
+    width: 5vw;
+    height: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(images/bus-logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin: 5px;
+}
+
+.ticket-txt-container {
+    width: 16vw;
+    height: 7vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.couch-info-main {
+    font-size: 21px;
+    color: black;
+    text-align: start;
+    padding: 0px;
+}
+
+.couch-info-sub {
+    font-size: 15px;
+}
+
+.ticket-heading {
+    width: 60vw;
+    height: 7vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ticket-right-button {
+    width: 15vw;
+    height: 4vw;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: rgb(8, 247, 167);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.ticket-right-button:hover {
+    background-color: rgb(89, 254, 199);
+    transition: all .5s;
+}
+
+.icon-tic {
+    background-image: url(images/seat-gray.png);
+    background-repeat: no-repeat;
+    width: 2vw;
+    height: 2vw;
+    background-size: cover;
+}
+
+.icon-txt {
+    font-size: 20px;
+    color: black;
+}
+
+.ticket-txt-l1 {
+    height: 4.5vw;
+    width: 55vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+hr {
+    width: 58vw;
+    height: 3px;
+    background-color: black;
+    border: 0px;
+}
+
+.ticket-txt {
+    font-size: 20px;
+    padding: 5px;
+    color: rgb(125, 126, 126);
+    font-family: "Sofadi One", system-ui;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.ticket-btn-container {
+    height: 5vw;
+    width: 58vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.ticket-btn {
+    width: 15vw;
+    height: 3vw;
+    margin: 10px;
+    font-size: 20px;
+    padding: 5px;
+    color: rgb(32, 33, 33);
+    font-family: "Sofadi One", system-ui;
+    font-weight: 500;
+    font-style: normal;
+    border-radius: 10px;
+    background-color: rgb(16, 248, 167);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ticket-btn:hover{
+    background-color: rgb(19, 99, 71);
+    transition:all .5s;
+}
+
+.ticket-devider{
+    width: 2px;
+    height: 19vw;
+    border-left: 3px dashed rgb(11, 11, 11);
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.money-icon{
+    width: 5vw;
+    height: 5vw;
+    background-image: url(images/fare.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 100%;
+}
+
+.money{
+    width: 28vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.amount{
+    font-size: 25px;
+    color: black;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    margin: 5px;
+}
+
+.zyz{
+    font-weight: 700;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mid-txt{
+    width: 85vw;
+
+}
+
+.mid-txt hr{
+    width: 85vw;
+    height: 2px;
+}
+.txt-a{
+    font-size: 25px;
+}
+
+.available{
+    width: 85vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ava-img{
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.seat-icon{
+    width: 2vw;
+    height: 2vw;
+    background-image: url(images/seat-green.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.g-seat-icon{
+    width: 2vw;
+    height: 2vw;
+    background-image: url(images/seat-green-filled.png);
+    background-repeat: no-repeat;
+    background-size: contain
+}
+
+.txt-b{
+    font-size: 22px;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.ma-bootom{
+    width: 85vw;
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+    align-items: top;
+    margin-top: 2vw;
+}
+
+.m-button-l{
+    width: 50vw;
+    
+}
+
+.stearing{
+    width:50vw ;
+    display: flex;
+    justify-content: end;
+}
+
+.str-icon{
+    width: 10vw;
+    height: 5vw;
+    background-image: url(https://wasib2005.github.io/Assignment5-25.02.2024/rec/images/driving.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    /* background-color: aliceblue; */
+}
+
+.seats-left{
+    width: 15vw;
+
+}
+
+.seat-row{
+    width: 15vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1vw;
+
+}
+
+.seat-row h2{
+    font-size: 20px;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: rgb(33, 1, 1);
+}
+
+.seat{
+    width: 6vw;
+    height: 3vw;
+    background-color: rgb(246, 248, 246);
+    font-size: 20px;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: rgb(85, 112, 99);
+    border: 5px solid green;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.seat-onclick{
+    background-color: green;
+    border: solid green;
+    width: 6vw;
+    height: 3vw;
+    font-size: 20px;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: rgb(249, 250, 250);
+    border: 5px solid green;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.seat:hover{
+    background-color: green;
+    border: solid rgb(246, 192, 192);
+    transition: all .5s ease-in-out;
+}
+
+.seats{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bus-devider{
+    height: 50vw;
+    margin: 10px;
+}
+
+.m-button-r{
+    width:35vw ;
+}
+
+.m-button-r hr{
+    width: 28vw;
+} 
+
+.seat-txt{
+    width: 28vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.seat-des{
+    font-size: 20px;
+}
+
+.seat-des-b{
+    font-size: 28px;
+}
+
+.pass-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.cuppon{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+.button-cup{
+    width: 7vw;
+    margin: 5px;
+
+}
+
+.filled-cup{
+    width: 25vw ;
+    height: 2vw;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 5px;
+    font-size: 22px;
+    border: 4px solid green;
+}
+
+.filled-cup-a{
+    width: 19vw;
+}
+
+.final-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+    background-color: rgb(102, 237, 102);
+    cursor: pointer;
+}
+.final-btn:hover{
+    background-color: green;
+    transition: all .5ms ;
+}
+
+
+footer{
+    width: 87vw;
+    height: 16vw;
+    background-color: rgb(3, 238, 255);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.f-heading{
+    width: 80vw;
+    height: 8vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.f-head-txt{
+    font-size: 40px;
+    font-weight: 700;
+}
+.f-head-stxt{
+    font-size: 20px;
+}
+
+.f-header-r{
+    width: 15vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 10px;
+}
+
+.p-icon{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+.p-img{
+    width: 3vw;
+    height: 3vw;
+    background-image: url(images/playstore.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+
+footer hr{
+    width: 83vw;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.f-end{
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.f-end-l{
+    font-size: 20px;
+}
+
+
+.f-end-r{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.f-end-r > li{
+    list-style: none;
+    font-size: 18px;
+    margin-left: 15px;
+    cursor: pointer;
+
+
+}
+
+.f-end-r > li:hover{
+    text-decoration: underline;
+}
+.txt-tik{
+    font-size: 18px;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: rgb(85, 112, 99);
+    margin: 5px;
+}
+
+.applycBtn{
+    height: 50px;
+    background-color: rgb(245, 247, 248);
+    border-radius: 12px;
+    font-size: 20px;
+    font-family: "Sofadi One", system-ui;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(13, 13, 13);
+    cursor: not-allowed;
+    width: 7vw;
+    margin: 5px;
+    border: 4px solid green;
+}
+
+.applycBtndefult{
+    height: 50px;
+    background-color: rgb(5, 73, 151);
+    border-radius: 12px;
+    font-size: 20px;
+    font-family: "Sofadi One", system-ui;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    width: 7vw;
+    margin: 5px;
+}
